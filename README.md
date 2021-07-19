@@ -2,9 +2,14 @@
 
 ## How to use testerve
 
+### Dashboard
+
+Access https://testerve.vercel.app/.
+
 ### Generate the API key
 
-By integrating the repository, the API key will be shown.
+By integrating the repository from the above dashboard, the API key will be shown.    
+This API key belongs to the repository.
 
 ### Upload the test report
 
@@ -13,10 +18,6 @@ Generate the junit format report, and upload it by using the `cli.js` with API k
 ```shell
 $ node bin/cli.js -t $TESTERVE_API_KEY -u https://testerve.vercel.app/ test-results/jest/junit.xml
 ```
-
-### Dashboard
-
-Access https://testerve.vercel.app/.
 
 ## Contribution
 
