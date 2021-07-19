@@ -26,7 +26,8 @@ jobs:
       - run: npm ci
       - run:
           name: test
-          command: npm run test
+          ## https://discuss.circleci.com/t/jest-out-of-memory-error/32263/3
+          command: npm run test -- --maxWorkers=1
           environment:
             DATABASE_URL: postgres://root:$POSTGRES_PASSWORD@127.0.0.1:5432/testerve_test
       - run:
