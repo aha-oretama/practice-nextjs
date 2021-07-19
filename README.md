@@ -34,3 +34,15 @@ $ npm run dev
 $ npm run test
 ```
 
+### CI
+
+CircleCI automatically checks some requirements.  
+The following items must be passed.
+
+- ci/circleci: lint
+- ci/circleci: test
+
+### CD
+
+Testerve is running on the vercel.  
+The main branch and pull request are automatically deployed to vercel. 
