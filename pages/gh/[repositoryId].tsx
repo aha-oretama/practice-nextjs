@@ -9,6 +9,7 @@ import { authServerSide } from '../../utils/auth0';
 import { GetServerSideProps } from 'next';
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 import { Commits } from '../../components/organism/commits';
+import { CountTimeLine } from '../../components/organism/countTimeLine';
 
 interface Props {
   user: UserProfile;
@@ -52,7 +53,7 @@ const GetRepositoryId: React.FunctionComponent<Props> = ({ user }) => {
           </Tab>
         </TabList>
         <TabPanel>
-          <h2>dashboard will be shown</h2>
+          <CountTimeLine repositoryId={repositoryId} />
         </TabPanel>
         <TabPanel>
           <Commits repositoryId={repositoryId} repository={repository!} />
